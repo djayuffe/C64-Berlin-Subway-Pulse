@@ -1,0 +1,36 @@
+BERLIN TRIP SUBWAY RELEASE v1.2.4 FINAL PULSE POLISH
+checks={
+  "InitTbl": 26,
+  "UpdateTbl": 26,
+  "PartFramesTbl_Lo": 26,
+  "PartFramesTbl_Hi": 26,
+  "PartBorderTbl": 26,
+  "PartBgTbl": 26,
+  "CardNameLo": 26,
+  "CardNameHi": 26,
+  "CardName": 26,
+  "CardSub": 0
+}
+verify_exit=0
+verify_output:
+PASS: release verification
+source_sha256=d7ac71088deb0a81e696c9364a29697263c24360fe6a1b7c8bf5ca386e479d35
+make_n_help_exit=0
+make_fix_perms_exit=0
+make_n_sha256_exit=0
+final_init_slot=fc_init
+final_update_slot=fc_update
+vic_register_writes=[('VIC_CTRL2', 192, 'sta VIC_CTRL2'), ('VIC_CTRL2', 482, 'sta VIC_CTRL2'), ('VIC_CTRL2', 503, 'sta VIC_CTRL2'), ('VIC_CTRL2', 587, 'sta VIC_CTRL2'), ('VIC_CTRL1', 190, 'sta VIC_CTRL1'), ('VIC_CTRL1', 470, 'sta VIC_CTRL1'), ('VIC_CTRL1', 589, 'sta VIC_CTRL1'), ('VIC_MEMPTR', 187, 'sta VIC_MEMPTR'), ('VIC_MEMPTR', 591, 'sta VIC_MEMPTR')]
+acme=not run - acme not available in sandbox
+
+IMPROVEMENTS:
+- Added mirrored final-pulse spark pairs on rows 6 and 18.
+- Added tiny centre heartbeat on row 11.
+- Kept SPACE skip, no-Black-Orbit2 final slot and READY warm start.
+- No row 24 writes added outside GlobalScroller.
+- No VIC control writes added.
+
+RESULT: PASS
+
+ERRORS:
+none
