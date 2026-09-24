@@ -31,3 +31,7 @@ make
 make inspect
 make run
 ```
+
+## Live VICE capture
+
+![Running C64 Berlin Subway Pulse](assets/live-vice.png)
