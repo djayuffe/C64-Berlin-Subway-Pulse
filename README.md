@@ -1,6 +1,16 @@
-# Berlin Trip Subway — Release v1.2.4 Final Pulse Polish
+# C64 - Berlin Trip Subway Pulse
 
-C64 / ACME / VICE release of the Berlin transit true-SID-techno demo.
+A C64/ACME/VICE release of the Berlin Transit SID-techno megademo. This
+version focuses on a stable final-scene pulse treatment while retaining the
+original scene controls and warm-start return.
+
+![VICE runtime capture](assets/live-vice.png)
+
+## Requirements
+
+- [ACME](https://sourceforge.net/projects/acme-crossass/) cross-assembler
+- Python 3 for the release verifier
+- [VICE](https://vice-emu.sourceforge.io/) `x64sc` for interactive playback
 
 ## Improvements
 
@@ -21,17 +31,19 @@ Preserved:
 - verifier-first build
 - PRG inspection after ACME
 
-## Recommended workflow
+## Build and run
 
 ```bash
-cd mega
-make fix-perms
-make test
 make
-make inspect
 make run
 ```
 
-## Live VICE capture
+`make` verifies the source, assembles `build/subway.prg`, and validates its
+load address. `make run` opens that PRG in VICE. The demo starts through the
+embedded BASIC loader (`SYS 2061`).
 
-![Running C64 Berlin Subway Pulse](assets/live-vice.png)
+## Controls
+
+- `SPACE` skips the active part or card.
+- A normal C64 reset returns to the BASIC prompt; the demo also preserves its
+  READY warm-start return path.
