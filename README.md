@@ -1,5 +1,8 @@
 # C64 - Berlin Trip Subway Pulse
 
+Copyright © 2026 Ulf Bertilsson. Licensed under the
+[GNU General Public License v3.0 or later](LICENSE).
+
 A C64/ACME/VICE release of the Berlin Transit SID-techno megademo. This
 version focuses on a stable final-scene pulse treatment while retaining the
 original scene controls and warm-start return.
