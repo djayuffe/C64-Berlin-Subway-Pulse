@@ -1,6 +1,8 @@
 # Berlin Trip Subway release helper
 # Requires: python3, ACME assembler, VICE x64sc
 
+.DEFAULT_GOAL := all
+
 .PHONY: help all test verify build inspect run clean distclean sha256 release-check fix-perms
 
 help:
@@ -28,7 +30,7 @@ build: verify
 	mkdir -p build
 	cd src && acme -f cbm -o ../build/subway.prg subway.s
 	python3 -S tools/inspect_prg.py build/subway.prg
-	@echo "built: mega/build/subway.prg"
+	@echo "built: build/subway.prg"
 
 inspect:
 	python3 -S tools/inspect_prg.py build/subway.prg

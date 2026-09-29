@@ -7,7 +7,7 @@ A C64/ACME/VICE release of the Berlin Transit SID-techno megademo. This
 version focuses on a stable final-scene pulse treatment while retaining the
 original scene controls and warm-start return.
 
-![VICE runtime capture](assets/live-vice.png)
+![VICE runtime capture](docs/screenshots/effects/effect-0.png)
 
 ## Requirements
 
@@ -50,3 +50,9 @@ embedded BASIC loader (`SYS 2061`).
 - `SPACE` skips the active part or card.
 - A normal C64 reset returns to the BASIC prompt; the demo also preserves its
   READY warm-start return path.
+
+## Complete effect gallery
+
+The complete 26-scene dispatch, descriptions, and native VICE captures are in
+[docs/EFFECTS.md](docs/EFFECTS.md). Each scene can be reviewed deterministically
+with the assembler-time `START_PART=0..25` selector.

@@ -1,4 +1,14 @@
-# Release notes — v1.2.4 Final Pulse Polish
+# Release notes — v1.2.5 Complete Effect Gallery
+
+## v1.2.5
+
+- Added native VICE captures and descriptions for all 26 active scenes.
+- Added deterministic `START_PART=0..25` review builds and a capture script.
+- Fixed the documented `make` entry point so it builds instead of only printing
+  help.
+- Kept the v1.2.4 final-pulse safety closure unchanged.
+
+## v1.2.4 Final Pulse Polish
 
 ## Improvements
 

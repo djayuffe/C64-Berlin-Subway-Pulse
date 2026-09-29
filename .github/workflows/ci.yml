@@ -1,0 +1,28 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v4
+      - name: Install build tools
+        run: |
+          sudo apt-get update
+          sudo apt-get install --no-install-recommends -y acme python3
+      - name: Build and inspect PRG
+        run: make
+      - name: Verify tracked release manifest
+        run: sha256sum -c SHA256SUMS.txt
+      - name: Upload PRG artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: berlin-subway-pulse-prg
+          path: build/subway.prg

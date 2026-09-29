@@ -15,4 +15,4 @@ cd src
 acme -f cbm -o ../build/subway.prg subway.s
 cd ..
 python3 -S tools/inspect_prg.py build/subway.prg
-echo "built: mega/build/subway.prg"
+echo "built: build/subway.prg"

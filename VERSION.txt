@@ -1,1 +1,1 @@
-berlin-trip-subway 1.2.4-final-pulse-polish
+berlin-trip-subway 1.2.5-complete-effect-gallery

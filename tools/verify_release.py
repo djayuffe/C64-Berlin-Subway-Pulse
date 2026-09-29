@@ -60,6 +60,9 @@ for lab in ["InitTbl", "UpdateTbl"]:
     if c != 26:
         errors.append(f"{lab}: expected 26, got {c}")
 
+if "START_PART = 0" not in text or "lda #START_PART" not in text:
+    errors.append("deterministic START_PART review selector is missing")
+
 for lab in ["PartFramesTbl_Lo", "PartFramesTbl_Hi", "PartBorderTbl", "PartBgTbl", "CardNameLo", "CardNameHi"]:
     c, _ = count_byte(lab)
     if c != 26:
